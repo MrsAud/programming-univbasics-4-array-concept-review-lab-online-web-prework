@@ -1,21 +1,18 @@
 def find_element_index(array, value_to_find)
-  i = 0
-  if array.include? (value_to_find)
-    until value_to_find == array[i] do
-    i += 1
+  array.length.times do |count|
+    if array[count] == value_to_find
+      return count
     end
-    i
-  else
-    nil
   end
+nil
 end
 
 def find_max_value(array)
   array.sort!
-  array[-1]
+  p array[-1]
 end
 
 def find_min_value(array)
   array.sort!
-  array[0]
+  p array[0]
 end
